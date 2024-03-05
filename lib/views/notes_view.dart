@@ -10,7 +10,7 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Kprimarycolor,
+        backgroundColor: kprimarycolor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(500),
         ),
