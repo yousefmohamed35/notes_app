@@ -52,7 +52,7 @@ class NoteItem extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
-                '${DateTime.parse(note.date).day.toString()}-${DateTime.parse(note.date).month.toString()}',
+                note.date,
                 style: TextStyle(
                     color: Colors.black.withOpacity(.5), fontSize: 16),
               ),
