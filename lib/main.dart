@@ -9,7 +9,7 @@ import 'package:todoapp/views/notes_view.dart';
 
 void main() async {
   await Hive.initFlutter();
-  Hive.openBox(kNotesBox);
+  Hive.openBox<NoteModel>(kNotesBox);
   Bloc.observer = SimpleBlocObserve();
   // to speak to hive to deal with type adapter
   Hive.registerAdapter(NoteModelAdapter());
@@ -21,17 +21,10 @@ class ToDoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => AddNoteCubit(),
-        )
-      ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
-        home: const NotesView(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+      home: const NotesView(),
     );
   }
 }
