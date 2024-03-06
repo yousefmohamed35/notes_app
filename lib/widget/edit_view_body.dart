@@ -9,7 +9,7 @@ class EditNoteViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 16),
+        padding:  EdgeInsets.symmetric(horizontal: 24,vertical: 16),
         child: Column(
           children: [
             CustomAppBar(title: 'Edit Note', icon:Icons.check,),
