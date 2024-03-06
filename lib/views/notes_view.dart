@@ -9,6 +9,7 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //تعبر عن ارتفاع الكيبورد
       floatingActionButton: FloatingActionButton(
         backgroundColor: kprimarycolor,
         shape: RoundedRectangleBorder(
@@ -16,6 +17,8 @@ class NotesView extends StatelessWidget {
         ),
         onPressed: () {
           showModalBottomSheet(
+            // to make the bottom sheet scrolled 
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),

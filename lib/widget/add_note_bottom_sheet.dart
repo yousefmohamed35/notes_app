@@ -32,9 +32,9 @@ class _AddNoteBottomSheetState extends State<AddNoteBottomSheet> {
           return  AbsorbPointer(
             // privinte user from using any thing in the screen while is loading 
             absorbing: state is AddNoteLoading ? true : false,
-            child: const Padding(
-            padding:   EdgeInsets.only(top: 32, left: 16, right: 16, bottom: 24),
-              child: SingleChildScrollView(child: AddNoteForm()),
+            child:  Padding(
+            padding:   EdgeInsets.only(top: 32, left: 16, right: 16, bottom: MediaQuery.of(context).viewInsets.bottom),
+              child:const SingleChildScrollView(child: AddNoteForm()),
             ),
           );
         },
