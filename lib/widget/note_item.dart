@@ -41,7 +41,10 @@ class NoteItem extends StatelessWidget {
               subtitleTextStyle:
                   TextStyle(color: Colors.black.withOpacity(.5), fontSize: 18),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  // delete from hive object 
+                  note.delete();
+                },
                 icon: const Icon(
                   FontAwesomeIcons.trash,
                   color: Colors.black,
