@@ -10,7 +10,7 @@ class NoteModel extends HiveObject{
   final String date;
   @HiveField(3)
   //we use int to color as hive not store objects so we use int not to make a type adapter to it 
-  final int color;
+ int color;
 
   NoteModel(
       {required this.title,
