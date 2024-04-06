@@ -3,14 +3,21 @@ import 'package:todoapp/constans.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
-      {super.key, required this.hintText, this.maxLines = 1, this.onSaved, this.onChanged});
-  final String hintText;
+      {super.key,
+      this.hintText,
+      this.maxLines = 1,
+      this.onSaved,
+      this.onChanged,
+      this.intialValue});
+  final String? hintText;
+  final String? intialValue;
   final int maxLines;
   final void Function(String?)? onSaved;
-final  void Function(String)? onChanged;
+  final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      initialValue: intialValue,
       onChanged: onChanged,
       onSaved: onSaved,
       validator: (value) {
