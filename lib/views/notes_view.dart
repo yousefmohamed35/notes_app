@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todoapp/constans.dart';
-import 'package:todoapp/cubits/notes_cubit/notes_cubit_cubit.dart';
 import 'package:todoapp/widget/add_note_bottom_sheet.dart';
 import 'package:todoapp/widget/notes_view_body.dart';
 
